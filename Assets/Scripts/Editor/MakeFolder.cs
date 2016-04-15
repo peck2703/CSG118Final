@@ -24,6 +24,8 @@ public class MakeFolder : Editor
         Directory.CreateDirectory(projectPath + "Resources");
         Directory.CreateDirectory(projectPath + "Scenes");
         Directory.CreateDirectory(projectPath + "Scripts");
+        Directory.CreateDirectory(projectPath + "Scripts/Runtime");
+        Directory.CreateDirectory(projectPath + "Scripts/Editor");
         Directory.CreateDirectory(projectPath + "Shaders");
         Directory.CreateDirectory(projectPath + "Sprites");
         Directory.CreateDirectory(projectPath + "Textures");

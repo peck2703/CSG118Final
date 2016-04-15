@@ -85,6 +85,7 @@ public class OrganizeMyShit : Editor
                 break;
             //C-Sharp Scripts - May need to include the type (MonoBehavior or Editor
             case ".cs":
+            case ".js":
                 newPath = "Assets/Scripts/Runtime/";
                 FileUtil.MoveFileOrDirectory(oldPath, newPath + fileName);
                 AssetDatabase.Refresh();
