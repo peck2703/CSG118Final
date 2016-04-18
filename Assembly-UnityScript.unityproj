@@ -46,10 +46,15 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\JavaBackgrpundScroll.js" />
-     <Compile Include="Assets\LaserMovement.js" />
-     <Compile Include="Assets\PlayerMovement.js" />
-     <Compile Include="Assets\fireScript.js" />
+     <Compile Include="Assets\Scripts\Runtime\Enemy1Fire.js" />
+     <Compile Include="Assets\Scripts\Runtime\Enemy1Movement.js" />
+     <Compile Include="Assets\Scripts\Runtime\JavaBackgrpundScroll.js" />
+     <Compile Include="Assets\Scripts\Runtime\LaserMovement.js" />
+     <Compile Include="Assets\Scripts\Runtime\PlayerMovement.js" />
+     <Compile Include="Assets\Scripts\Runtime\enemy1Collision.js" />
+     <Compile Include="Assets\Scripts\Runtime\fireScript.js" />
+     <Compile Include="Assets\Scripts\Runtime\playerCollision.js" />
+     <Compile Include="Assets\Scripts\Runtime\powerUpCollision.js" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
