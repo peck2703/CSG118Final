@@ -46,15 +46,15 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\Runtime\Enemy1Fire.js" />
-     <Compile Include="Assets\Scripts\Runtime\Enemy1Movement.js" />
-     <Compile Include="Assets\Scripts\Runtime\JavaBackgrpundScroll.js" />
-     <Compile Include="Assets\Scripts\Runtime\LaserMovement.js" />
-     <Compile Include="Assets\Scripts\Runtime\PlayerMovement.js" />
-     <Compile Include="Assets\Scripts\Runtime\enemy1Collision.js" />
-     <Compile Include="Assets\Scripts\Runtime\fireScript.js" />
-     <Compile Include="Assets\Scripts\Runtime\playerCollision.js" />
-     <Compile Include="Assets\Scripts\Runtime\powerUpCollision.js" />
+     <Compile Include="Assets\Scripts\Runtime\Java\Enemy1Fire.js" />
+     <Compile Include="Assets\Scripts\Runtime\Java\Enemy1Movement.js" />
+     <Compile Include="Assets\Scripts\Runtime\Java\JavaBackgrpundScroll.js" />
+     <Compile Include="Assets\Scripts\Runtime\Java\LaserMovement.js" />
+     <Compile Include="Assets\Scripts\Runtime\Java\PlayerMovement.js" />
+     <Compile Include="Assets\Scripts\Runtime\Java\enemy1Collision.js" />
+     <Compile Include="Assets\Scripts\Runtime\Java\fireScript.js" />
+     <Compile Include="Assets\Scripts\Runtime\Java\playerCollision.js" />
+     <Compile Include="Assets\Scripts\Runtime\Java\powerUpCollision.js" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

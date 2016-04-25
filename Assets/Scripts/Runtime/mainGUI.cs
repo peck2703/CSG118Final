@@ -12,6 +12,10 @@ public class mainGUI : MonoBehaviour
     public Texture starTrekButton;
     public Texture spaceballsButton;
 
+    public string starWarsLevel;
+    public string starTrekLevel;
+    public string spaceballsLevel;
+
     public bool optionButtonPressed = false;
 
     void Start()
@@ -23,16 +27,16 @@ public class mainGUI : MonoBehaviour
 		if (!optionButtonPressed) {
 			if (GUI.Button (new Rect ((mainCamera.pixelWidth - 200) / 2, (mainCamera.pixelHeight - 250) / 2, 200, 50), starWarsButton))
             {
-				Application.LoadLevel (nextLevel);
+				Application.LoadLevel (starWarsLevel);
 			}
 			if (GUI.Button (new Rect ((mainCamera.pixelWidth - 200) / 2, (mainCamera.pixelHeight - 125) / 2, 200, 50), starTrekButton))
             {
-				Application.LoadLevel (levelSelect);
+				Application.LoadLevel (starTrekLevel);
 			}
 			if (GUI.Button (new Rect ((mainCamera.pixelWidth - 200) / 2, (mainCamera.pixelHeight - 0) / 2, 200, 50), spaceballsButton))
             {
-
-			}
+                Application.LoadLevel(spaceballsLevel);
+            }
             if (GUI.Button(new Rect((mainCamera.pixelWidth - 200) / 2, (mainCamera.pixelHeight + 125) / 2, 200, 50), "Options"))
             { 
                 optionButtonPressed = true;
