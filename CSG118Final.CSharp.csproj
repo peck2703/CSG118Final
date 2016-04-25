@@ -61,7 +61,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Runtime\Enemy1Collision.cs" />
+    <Compile Include="Assets\Scripts\Runtime\Enemy1Fire.cs" />
+    <Compile Include="Assets\Scripts\Runtime\Enemy1Movement.cs" />
+    <Compile Include="Assets\Scripts\Runtime\FireScript.cs" />
+    <Compile Include="Assets\Scripts\Runtime\JavaBackgroundScroll.cs" />
+    <Compile Include="Assets\Scripts\Runtime\LaserMovement.cs" />
     <Compile Include="Assets\Scripts\Runtime\PauseScript.cs" />
+    <Compile Include="Assets\Scripts\Runtime\PlayerCollision.cs" />
+    <Compile Include="Assets\Scripts\Runtime\PlayerMovement.cs" />
+    <Compile Include="Assets\Scripts\Runtime\PowerUpCollision.cs" />
     <Compile Include="Assets\Scripts\Runtime\mainGUI.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />

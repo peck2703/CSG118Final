@@ -3,7 +3,6 @@ using System.Collections;
 
 public class mainGUI : MonoBehaviour
 {
-
 	public string levelSelect;
 	public string nextLevel;
 	public string mainMenu;
@@ -14,7 +13,6 @@ public class mainGUI : MonoBehaviour
     public Texture spaceballsButton;
 
     public bool optionButtonPressed = false;
-	// Use this for initialization
 
     void Start()
     {
@@ -57,8 +55,6 @@ public class mainGUI : MonoBehaviour
             {
                 optionButtonPressed = false;
             }
-            if (GUI.Button())
-            //PlayerPrefs.SetInt("LevelUnlocked")
         }
 	}
 }
