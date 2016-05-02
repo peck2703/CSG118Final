@@ -4,11 +4,18 @@ using System.Collections;
 public class PlayerCollision : MonoBehaviour
 {
     public GameObject explosion;                                                        //Stores the game object of laser to instantiate
+    GameObject sceneManagerGO;
+    private int lives = 3;
 
+    void Start()
+    {
+       
+    }
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.tag == "EnemyLaser")                                       //Get the tag off the object on Trigger
         {
+            sceneManagerGO.GetComponent<sceneManager>().SubtractLife();
             if (explosion)                                                              //Check if explosion exists so we don't instantiate nothing
             {
                 Instantiate(explosion, transform.position, transform.rotation);

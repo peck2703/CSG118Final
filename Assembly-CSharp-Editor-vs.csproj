@@ -50,9 +50,6 @@
      <Compile Include="Assets\Scripts\Editor\MakeMaterial.cs" />
      <Compile Include="Assets\Scripts\Editor\MakePrefab.cs" />
      <Compile Include="Assets\Scripts\Editor\OrganizeMyShit.cs" />
- <Reference Include="Assembly-UnityScript">
- <HintPath>C:/Users/peckmr.AD/Documents/GitHub/CSG118Final/Library/ScriptAssemblies/Assembly-UnityScript.dll</HintPath>
- </Reference>
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

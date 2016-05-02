@@ -46,18 +46,20 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\MainMenuKey.cs" />
      <Compile Include="Assets\Scripts\Runtime\Enemy1Collision.cs" />
      <Compile Include="Assets\Scripts\Runtime\Enemy1Fire.cs" />
      <Compile Include="Assets\Scripts\Runtime\Enemy1Movement.cs" />
      <Compile Include="Assets\Scripts\Runtime\FireScript.cs" />
      <Compile Include="Assets\Scripts\Runtime\JavaBackgroundScroll.cs" />
      <Compile Include="Assets\Scripts\Runtime\LaserMovement.cs" />
+     <Compile Include="Assets\Scripts\Runtime\MainMenuKey.cs" />
      <Compile Include="Assets\Scripts\Runtime\PauseScript.cs" />
      <Compile Include="Assets\Scripts\Runtime\PlayerCollision.cs" />
      <Compile Include="Assets\Scripts\Runtime\PlayerMovement.cs" />
      <Compile Include="Assets\Scripts\Runtime\PowerUpCollision.cs" />
      <Compile Include="Assets\Scripts\Runtime\mainGUI.cs" />
+     <Compile Include="Assets\Scripts\Runtime\sceneManager.cs" />
+     <Compile Include="Assets\TimeDelayDestroy.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

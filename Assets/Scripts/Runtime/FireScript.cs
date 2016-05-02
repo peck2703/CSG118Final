@@ -7,20 +7,22 @@ public class FireScript : MonoBehaviour
     public float fireFrequency;                     //How often you can fire
     float lastShot;                                 //Time since last firing of laser
     float laserTimer;                               //How long the power up lasts
-    int laserType;                                  //Powerup determines what laser type shows up
+    int laserType;                                 //Powerup determines what laser type shows up
     AudioSource audioFile;                          //Controls the audio clip or picks various ones
 
 	void Start ()                                   // Use this for initialization
     {
         audioFile = GetComponent<AudioSource>();    //Grab the components in Start() always
+        laserType = 0;
 	}
 	
 	void Update ()                                  // Update is called once per frame
     {
         if (Input.GetMouseButton(0) && (Time.time > lastShot + fireFrequency))          //Can fire again
         {
+            print("Key Pressed");
             Fire();                                                                     //Calls fire Method
-            laserTimer -= Time.time / 10;                                               //Countdown for powerup use. 10 is a multiplier just because
+            laserTimer -= Time.time;                                               //Countdown for powerup use. 10 is a multiplier just because
             if (laserTimer < 0)                                                         //Timer is over
             {
                 laserType = 0;                                                          //LaserType 0 is standard
@@ -29,11 +31,12 @@ public class FireScript : MonoBehaviour
     }
     void Fire()
     {
+        print("In Fire");
         lastShot = Time.time;                                                                       //Sets the next lastShot so we can fire after the fireFrequency time is up
         
         if (laserType == 0)                                                                         //Standard Laser
         {
-            Instantiate(laser, transform.position, transform.rotation);                             //Instantiate the standard laser
+            Instantiate(laser, transform.position, Quaternion.Euler(0,0,90));                             //Instantiate the standard laser
         }
         else if (laserType == 1)                                                                    //Powered up laser
         {
