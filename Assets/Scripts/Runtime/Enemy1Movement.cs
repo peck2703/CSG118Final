@@ -3,11 +3,11 @@ using System.Collections;
 
 public class Enemy1Movement : MonoBehaviour
 {
-    public float xMult;                     //Multiplier for faster movement
     public int points;
-    public Vector2 playerPos;
+    public float playerPos;
     public bool isHorizontal = true;
     public float xMin, xMax, yMin, yMax;
+    public float movementSpeed = 5.0f;
 
 	void Start ()                           // Use this for initialization
     {
@@ -15,18 +15,22 @@ public class Enemy1Movement : MonoBehaviour
         {
             points = 100;                   //minimum of 100 points
         }
+        playerPos = GameObject.FindGameObjectWithTag("Player").transform.position.y;
     }
 	
 	void Update ()                          // Update is called once per frame
     {
-        playerPos = GameObject.FindGameObjectWithTag("Player").transform.position;
+        playerPos = GameObject.FindGameObjectWithTag("Player").transform.position.y;
         if (isHorizontal)
         {
-            while (transform.position.y != playerPos.y)
-            {
-                transform.position = new Vector3(Mathf.Clamp(Time.deltaTime, xMin, xMax) * Time.deltaTime, Mathf.Clamp(playerPos.y, yMin, yMax) * Time.deltaTime, 0);
+            if (transform.position.y != (playerPos - 10) )
+            {                                
+                transform.position = Vector3.Lerp(transform.position, new Vector3(transform.position.x, playerPos -Random.Range(-25, 25), 0), Time.deltaTime * movementSpeed);
             }
-                //transform.position = new Vector3(Mathf.PingPong(Time.time * xMult, enemyWiggle.x), (initPos.y + Mathf.PingPong(Time.time, enemyWiggle.y)), 0);              //Ping-Pong the enemy against the xMin and xMax
+            if(transform.position.x != xMin)
+            {
+                Vector3.Lerp(new Vector3(transform.position.x, playerPos, 0), transform.position, Time.deltaTime * movementSpeed);
+            }
         }
     }
 }

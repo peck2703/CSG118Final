@@ -57,6 +57,7 @@
      <Compile Include="Assets\Scripts\Runtime\PlayerCollision.cs" />
      <Compile Include="Assets\Scripts\Runtime\PlayerMovement.cs" />
      <Compile Include="Assets\Scripts\Runtime\PowerUpCollision.cs" />
+     <Compile Include="Assets\Scripts\Runtime\levelScript.cs" />
      <Compile Include="Assets\Scripts\Runtime\mainGUI.cs" />
      <Compile Include="Assets\Scripts\Runtime\sceneManager.cs" />
      <Compile Include="Assets\TimeDelayDestroy.cs" />

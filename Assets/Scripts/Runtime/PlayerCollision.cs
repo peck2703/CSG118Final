@@ -8,13 +8,13 @@ public class PlayerCollision : MonoBehaviour
 
     void Start()
     {
-       
+        sceneManagerGO = GameObject.Find("SceneManager");
     }
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.tag == "EnemyLaser")                                       //Get the tag off the object on Trigger
         {
-            sceneManagerGO.GetComponent<sceneManager>().SubtractLife();
+            sceneManagerGO.GetComponent<sceneManager>().SubtractLife(transform.position.x, transform.position.y);
             if (explosion)                                                              //Check if explosion exists so we don't instantiate nothing
             {
                 Instantiate(explosion, transform.position, transform.rotation);
