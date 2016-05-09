@@ -11,7 +11,7 @@ public class Enemy1Collision : MonoBehaviour
 
     void Start()
     {
-
+        pointsWorth = GetComponent<Enemy1Collision>().pointsWorth;
     }
     void Update()
     {

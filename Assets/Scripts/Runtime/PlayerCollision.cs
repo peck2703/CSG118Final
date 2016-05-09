@@ -4,8 +4,7 @@ using System.Collections;
 public class PlayerCollision : MonoBehaviour
 {
     public GameObject explosion;                                                        //Stores the game object of laser to instantiate
-    GameObject sceneManagerGO;
-    private int lives = 3;
+    public GameObject sceneManagerGO;
 
     void Start()
     {

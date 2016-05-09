@@ -3,14 +3,14 @@ using System.Collections;
 
 public class Enemy1Movement : MonoBehaviour
 {
-    public Vector3 initPos;
     public float xMult;                     //Multiplier for faster movement
-    public Vector2 enemyWiggle;             //Makes the player move up and down partially
     public int points;
+    public Vector2 playerPos;
+    public bool isHorizontal = true;
+    public float xMin, xMax, yMin, yMax;
 
 	void Start ()                           // Use this for initialization
     {
-        initPos = transform.position;       //Grab the initial position from the transform on Awake
         if (points < 100)
         {
             points = 100;                   //minimum of 100 points
@@ -19,6 +19,14 @@ public class Enemy1Movement : MonoBehaviour
 	
 	void Update ()                          // Update is called once per frame
     {
-        transform.position = new Vector3(Mathf.PingPong(Time.time * xMult, enemyWiggle.x), (initPos.y + Mathf.PingPong(Time.time, enemyWiggle.y)), 0);              //Ping-Pong the enemy against the xMin and xMax
+        playerPos = GameObject.FindGameObjectWithTag("Player").transform.position;
+        if (isHorizontal)
+        {
+            while (transform.position.y != playerPos.y)
+            {
+                transform.position = new Vector3(Mathf.Clamp(Time.deltaTime, xMin, xMax) * Time.deltaTime, Mathf.Clamp(playerPos.y, yMin, yMax) * Time.deltaTime, 0);
+            }
+                //transform.position = new Vector3(Mathf.PingPong(Time.time * xMult, enemyWiggle.x), (initPos.y + Mathf.PingPong(Time.time, enemyWiggle.y)), 0);              //Ping-Pong the enemy against the xMin and xMax
+        }
     }
 }
