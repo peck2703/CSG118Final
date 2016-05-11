@@ -46,6 +46,7 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\Runtime\EmpirePowerUp.cs" />
      <Compile Include="Assets\Scripts\Runtime\Enemy1Collision.cs" />
      <Compile Include="Assets\Scripts\Runtime\Enemy1Fire.cs" />
      <Compile Include="Assets\Scripts\Runtime\Enemy1Movement.cs" />
@@ -57,10 +58,12 @@
      <Compile Include="Assets\Scripts\Runtime\PlayerCollision.cs" />
      <Compile Include="Assets\Scripts\Runtime\PlayerMovement.cs" />
      <Compile Include="Assets\Scripts\Runtime\PowerUpCollision.cs" />
+     <Compile Include="Assets\Scripts\Runtime\RebelPowerUp.cs" />
      <Compile Include="Assets\Scripts\Runtime\levelScript.cs" />
      <Compile Include="Assets\Scripts\Runtime\mainGUI.cs" />
      <Compile Include="Assets\Scripts\Runtime\sceneManager.cs" />
      <Compile Include="Assets\TimeDelayDestroy.cs" />
+     <Compile Include="Assets\audioClipChoser.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

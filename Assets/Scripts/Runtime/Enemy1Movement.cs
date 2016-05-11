@@ -8,6 +8,7 @@ public class Enemy1Movement : MonoBehaviour
     public bool isHorizontal = true;
     public float xMin, xMax, yMin, yMax;
     public float movementSpeed = 5.0f;
+    public float range;
 
 	void Start ()                           // Use this for initialization
     {
@@ -23,9 +24,9 @@ public class Enemy1Movement : MonoBehaviour
         playerPos = GameObject.FindGameObjectWithTag("Player").transform.position.y;
         if (isHorizontal)
         {
-            if (transform.position.y != (playerPos - 10) )
+            if (transform.position.y != (playerPos - range) )
             {                                
-                transform.position = Vector3.Lerp(transform.position, new Vector3(transform.position.x, playerPos -Random.Range(-25, 25), 0), Time.deltaTime * movementSpeed);
+                transform.position = Vector3.Lerp(transform.position, new Vector3(transform.position.x, playerPos -Random.Range(-range, range), 0), Time.deltaTime);
             }
             if(transform.position.x != xMin)
             {

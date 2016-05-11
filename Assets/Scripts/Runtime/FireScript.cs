@@ -54,4 +54,19 @@ public class FireScript : MonoBehaviour
         laserTimer = 5;                                                                 //Set the laser time to 5
         laserType = Mathf.Clamp(laserType, 0, 1);                                       //Clamps the laserType so it doesn't go above the maximum
     }
+    public void RebelPowerUpPower()
+    {
+        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+        for(int i = 0; i < enemies.Length; i++)
+        {
+            Destroy(enemies[i].gameObject);
+        }
+    }
+    public void EmpirePowerUpPower()
+    {
+        laserType++;                                                                    //Increments the laser type to fire powered up laser
+        audioFile.Play();                                                               //Play the audio file
+        laserTimer = 5;                                                                 //Set the laser time to 5
+        laserType = Mathf.Clamp(laserType, 0, 1);                                       //Clamps the laserType so it doesn't go above the maximum
+    }
 }
