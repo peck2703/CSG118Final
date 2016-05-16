@@ -31,7 +31,7 @@ public class mainGUI : MonoBehaviour
 			}
 			if (GUI.Button (new Rect ((mainCamera.pixelWidth - 200) / 2, (mainCamera.pixelHeight - 125) / 2, 200, 50), starTrekButton))
             {
-				Application.LoadLevel (starTrekLevel);
+				
 			}
 			if (GUI.Button (new Rect ((mainCamera.pixelWidth - 200) / 2, (mainCamera.pixelHeight - 0) / 2, 200, 50), spaceballsButton))
             {

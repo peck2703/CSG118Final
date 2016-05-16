@@ -10,7 +10,8 @@ public class sceneManager : MonoBehaviour
     public float delayTimer = 2.0f;
 
     public GameObject myPlayer;
-    private float myNewXpos, myNewYPos;
+    GameObject playerRef;
+    private float myNewXMinPos, myNewXMaxPos, myNewYMinPos, myNewYMaxPos;
 	// Use this for initialization
 	void Start ()
     {
@@ -18,7 +19,12 @@ public class sceneManager : MonoBehaviour
         {
             InvokeRepeating("CountDown", 1.0f, 1.0f);
         }
-	}
+        playerRef = GameObject.FindGameObjectWithTag("Player");
+        myNewXMinPos = playerRef.GetComponent<PlayerMovement>().xMin;
+        myNewXMaxPos = playerRef.GetComponent<PlayerMovement>().xMax;
+        myNewYMinPos = playerRef.GetComponent<PlayerMovement>().yMin;
+        myNewYMaxPos = playerRef.GetComponent<PlayerMovement>().yMax;
+    }
 
     // Update is called once per frame
     void Update()
@@ -46,15 +52,13 @@ public class sceneManager : MonoBehaviour
     IEnumerator Respawn(float spawnDelay)
     {
         yield return new WaitForSeconds(spawnDelay);
-        Instantiate(myPlayer, new Vector3(myNewXpos, myNewYPos, 0), Quaternion.Euler(0, 0, 0));
+        Instantiate(myPlayer, new Vector3(Random.Range(myNewXMinPos, myNewXMaxPos), Random.Range(myNewYMinPos, myNewYMaxPos), 0), Quaternion.Euler(0, 0, 0));
     }
     public void SubtractLife(float newXpos, float newYPos)
     {
         lives -= 1;
         score++;
         //myPlayer = player;
-        myNewXpos = newXpos;
-        myNewYPos = newYPos;
         delayTimer = 2.0f;
         StartCoroutine("Respawn", 2.0f);
     }
